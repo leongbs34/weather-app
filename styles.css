@@ -4,14 +4,25 @@ body {
   width: 100vw;
   padding: 0;
   margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-image: url("background.jpg");
 }
 
 input {
   position: relative;
   padding: 10px 10px 10px 40px;
   width: 500px;
-  border-radius: 20px;
-  border: 2px solid grey;
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
 }
 
 .icons {
@@ -28,5 +39,9 @@ span {
 }
 
 .fa-search {
-  color: gray;
+  color: white;
+}
+
+input:focus-visible {
+  outline: none;
 }
