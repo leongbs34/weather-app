@@ -14,15 +14,49 @@
                 <i class="fas fa-search icons"></i>
                 <form>
                     <input type="text" name="search-city" id="search-city" placeholder="Search city">
+                    <div class="error hide">No matching location found!</div>
                 </form>
             </span>
         </div>
         <div class="main">
             <div class="weather">
                 <h1 class="location">Location</h1>
+                <p>Weather</p>
                 <div class="desc">
-                    <h2>Weather</h2>
                     <img src="#" alt="weather image">
+                    <div class="temperatureContainer">
+                        <div class="temperature">
+                            <h1>Temperature</h1>
+                            <button class="textButton celsius">°C</button>
+                            <button class="textButton fahrenheit deactivated">°F</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div id="feelsLike" class="details-item">
+                        <i class="fas fa-thermometer-three-quarters"></i>
+                        <div class="info">
+                            <div class="details-label">Feels Like</div>
+                            <div class="details-value">Temp</div>
+                        </div>
+                    </div>
+
+                    <div id="humidity" class="details-item">
+                        <i class="fas fa-tint"></i>
+                        <div class="info">
+                            <div class="details-label">Humidity</div>
+                            <div class="details-value">Value</div>
+                        </div>
+                    </div>
+                    
+                    <div id="wind" class="details-item">
+                        <i class="fas fa-wind"></i>
+                        <div class="info">
+                            <div class="details-label">Wind Speed</div>
+                            <div class="details-value">Value</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

@@ -11,11 +11,16 @@ body {
 
 :root {
   --font-color: white;
+  --unit: "°C";
 }
 
 h1,
-h2 {
+h2,
+h3,
+p,
+span {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -58,20 +63,118 @@ input:focus-visible {
 }
 
 .main {
-  padding: 5rem;
+  padding: 10rem;
   height: 100%;
 }
 
 .weather {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 3rem;
+  font-size: 2rem;
+  width: max-content;
+}
+
+.location {
+  line-height: 3.5rem;
 }
 
 .desc {
   display: flex;
+  height: 10rem;
 }
 
-.desc h2 {
-  align-self: center;
+.temperatureContainer {
+  display: flex;
+  align-items: center;
+}
+
+.temperature {
+  display: flex;
+}
+
+.temperature h1 {
+  font-size: 5rem;
+  padding-right: 0.4rem;
+}
+
+.textButton {
+  border: none;
+  padding: 0;
+  background: none;
+  color: var(--font-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: max-content;
+  cursor: initial;
+}
+
+.deactivated {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.celsius {
+  padding-right: 0.6rem;
+  border-right: 1px solid var(--font-color);
+}
+
+.fahrenheit {
+  padding-left: 0.6rem;
+}
+
+.details {
+  display: flex;
+}
+
+.details-item {
+  display: flex;
+}
+
+.details-item i {
+  font-size: 5rem;
+  padding-right: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.details-label {
+  font-size: 1rem;
+}
+
+.details-value {
+  position: relative;
+  font-weight: bold;
+  font-size: 2.8rem;
+}
+
+#feelsLike .details-value::after {
+  position: absolute;
+  content: var(--unit);
+  font-size: 1rem;
+  top: 0.4rem;
+}
+
+.details-item {
+  margin-right: 3rem;
+}
+
+.details-item:last-child {
+  margin-right: 0;
+}
+
+.error {
+  color: #ff0000;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 2px;
+  padding: 0.4rem;
+  text-align: center;
+  font-weight: bold;
 }
