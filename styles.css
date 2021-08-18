@@ -6,23 +6,38 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   background-image: url("background.jpg");
+  color: var(--font-color);
+}
+
+:root {
+  --font-color: white;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 input {
   position: relative;
   padding: 10px 10px 10px 40px;
-  width: 500px;
+  width: 20rem;
   border: none;
   border-bottom: 2px solid white;
   background: transparent;
-  color: white;
+  color: var(--font-color);
   font-size: 1rem;
   font-weight: 600;
 }
 
 ::placeholder {
-  color: white;
-  opacity: 1;
+  color: var(--font-color);
+  opacity: 0.6;
 }
 
 .icons {
@@ -38,10 +53,25 @@ span {
   float: right;
 }
 
-.fa-search {
-  color: white;
-}
-
 input:focus-visible {
   outline: none;
+}
+
+.main {
+  padding: 5rem;
+  height: 100%;
+}
+
+.weather {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.desc {
+  display: flex;
+}
+
+.desc h2 {
+  align-self: center;
 }
