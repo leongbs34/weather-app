@@ -52,7 +52,7 @@ async function getWeather(){
     desc.textContent = weather;
 
     const imgCode = result.weather[0].icon;
-    const image = await fetch(`http://openweathermap.org/img/wn/${imgCode}@2x.png`);
+    const image = await fetch(`https://openweathermap.org/img/wn/${imgCode}@2x.png`);
 
     return image;
 }
