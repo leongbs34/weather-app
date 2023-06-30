@@ -1,17 +1,18 @@
 html,
 body {
-  height: 100vh;
-  width: 100vw;
-  padding: 0;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  background-image: url("background.jpg");
-  color: var(--font-color);
+	height: 100vh;
+	width: 100vw;
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	background-image: url('background.jpg');
+	background-size: cover;
+	color: var(--font-color);
 }
 
 :root {
-  --font-color: white;
-  --unit: "°C";
+	--font-color: white;
+	--unit: '°C';
 }
 
 h1,
@@ -19,162 +20,165 @@ h2,
 h3,
 p,
 span {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 input {
-  position: relative;
-  padding: 10px 10px 10px 40px;
-  width: 20rem;
-  border: none;
-  border-bottom: 2px solid white;
-  background: transparent;
-  color: var(--font-color);
-  font-size: 1rem;
-  font-weight: 600;
+	position: relative;
+	padding: 10px 10px 10px 40px;
+	width: 20rem;
+	border: none;
+	border-bottom: 2px solid white;
+	background: transparent;
+	color: var(--font-color);
+	font-size: 1rem;
+	font-weight: 600;
 }
 
 ::placeholder {
-  color: var(--font-color);
-  opacity: 0.6;
+	color: var(--font-color);
+	opacity: 0.6;
 }
 
 .icons {
-  padding: 13px 10px 10px 10px;
-  position: absolute;
-  z-index: 1;
+	padding: 13px 10px 10px 10px;
+	position: absolute;
+	z-index: 1;
 }
 
 span {
-  padding: 1rem;
-  width: max-content;
-  box-sizing: border-box;
-  float: right;
+	padding: 1rem;
+	width: max-content;
+	box-sizing: border-box;
+	float: right;
 }
 
 input:focus-visible {
-  outline: none;
+	outline: none;
 }
 
 .main {
-  padding: 10rem;
-  height: 100%;
+	padding: 10rem;
+	height: 100%;
 }
 
 .weather {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  padding: 3rem;
-  font-size: 2rem;
-  width: max-content;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	padding: 3rem;
+	font-size: 2rem;
+	width: max-content;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
 }
 
 .location {
-  line-height: 3.5rem;
+	line-height: 3.5rem;
 }
 
 .desc {
-  display: flex;
-  height: 10rem;
+	display: flex;
+	height: 10rem;
 }
 
 .temperatureContainer {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .temperature {
-  display: flex;
+	display: flex;
 }
 
 .temperature h1 {
-  font-size: 5rem;
-  padding-right: 0.4rem;
+	font-size: 5rem;
+	padding-right: 0.4rem;
 }
 
 .textButton {
-  border: none;
-  padding: 0;
-  background: none;
-  color: var(--font-color);
-  font-size: 1.2rem;
-  font-weight: bold;
-  height: max-content;
-  cursor: initial;
+	border: none;
+	padding: 0;
+	background: none;
+	color: var(--font-color);
+	font-size: 1.2rem;
+	font-weight: bold;
+	height: max-content;
+	cursor: initial;
 }
 
 .deactivated {
-  cursor: pointer;
-  opacity: 0.6;
+	cursor: pointer;
+	opacity: 0.6;
 }
 
 .celsius {
-  padding-right: 0.6rem;
-  border-right: 1px solid var(--font-color);
+	padding-right: 0.6rem;
+	border-right: 1px solid var(--font-color);
 }
 
 .fahrenheit {
-  padding-left: 0.6rem;
+	padding-left: 0.6rem;
 }
 
 .details {
-  display: flex;
+	display: flex;
 }
 
 .details-item {
-  display: flex;
+	display: flex;
 }
 
 .details-item i {
-  font-size: 5rem;
-  padding-right: 1rem;
+	font-size: 5rem;
+	padding-right: 1rem;
 }
 
 .info {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .hide {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 .details-label {
-  font-size: 1rem;
+	font-size: 1rem;
 }
 
 .details-value {
-  position: relative;
-  font-weight: bold;
-  font-size: 2.8rem;
+	position: relative;
+	font-weight: bold;
+	font-size: 2.8rem;
 }
 
 #feelsLike .details-value::after {
-  position: absolute;
-  content: var(--unit);
-  font-size: 1rem;
-  top: 0.4rem;
+	position: absolute;
+	content: var(--unit);
+	font-size: 1rem;
+	top: 0.4rem;
 }
 
 .details-item {
-  margin-right: 3rem;
+	margin-right: 3rem;
 }
 
 .details-item:last-child {
-  margin-right: 0;
+	margin-right: 0;
 }
 
 .error {
-  color: #ff0000;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 2px;
-  padding: 0.4rem;
-  text-align: center;
-  font-weight: bold;
+	color: #ff0000;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 2px;
+	padding: 0.4rem;
+	text-align: center;
+	font-weight: bold;
 }
