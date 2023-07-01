@@ -9,6 +9,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	background-image: url('background.jpg');
 	background-size: cover;
+	background-attachment: fixed;
 	color: var(--font-color);
 	height: 100%;
 }
