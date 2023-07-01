@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="styles.css" rel='stylesheet'></link>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Tangerine:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
-    </head>
-    <body>
-        <div class="header">
-            <span class="search-bar">
-                <i class="fas fa-search icons"></i>
-                <form>
-                    <input type="text" name="search-city" id="search-city" placeholder="Search city">
-                    <div class="error hide">No matching location found!</div>
-                </form>
-            </span>
-        </div>
-        <div class="main">
-            <div class="weather">
-                <h1 class="location">Location</h1>
-                <p>Weather</p>
-                <div class="desc">
-                    <img src="#" alt="weather image">
-                    <div class="temperatureContainer">
-                        <div class="temperature">
-                            <h1>Temperature</h1>
-                            <button class="textButton celsius">°C</button>
-                            <button class="textButton fahrenheit deactivated">°F</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="details">
-                    <div id="feelsLike" class="details-item">
-                        <i class="fas fa-thermometer-three-quarters"></i>
-                        <div class="info">
-                            <div class="details-label">Feels Like</div>
-                            <div class="details-value">Temp</div>
-                        </div>
-                    </div>
+	<head>
+		<link href="styles.css" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Tangerine:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			referrerpolicy="no-referrer"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<form class="search-bar">
+					<i class="fas fa-search icons"></i>
+					<input
+						type="text"
+						name="search-city"
+						id="search-city"
+						placeholder="Search city"
+					/>
+					<!-- <div class="error hide">No matching location found!</div> -->
+				</form>
+			</div>
+		</header>
+		<div class="main">
+			<div class="weather-section">
+				<h2 class="location">Location</h2>
+				<p>Weather</p>
+				<div class="desc">
+					<img src="#" alt="weather image" />
+					<div class="temperatureContainer">
+						<div class="temperature">
+							<h1>Temperature</h1>
+							<button class="textButton celsius">°C</button>
+							<button class="textButton fahrenheit deactivated">°F</button>
+						</div>
+					</div>
+				</div>
+				<div class="details">
+					<div id="feelsLike" class="details-item">
+						<i class="fas fa-thermometer-three-quarters"></i>
+						<div class="info">
+							<div class="details-label">Feels Like</div>
+							<div class="details-value">Temp</div>
+						</div>
+					</div>
 
-                    <div id="humidity" class="details-item">
-                        <i class="fas fa-tint"></i>
-                        <div class="info">
-                            <div class="details-label">Humidity</div>
-                            <div class="details-value">Value</div>
-                        </div>
-                    </div>
-                    
-                    <div id="wind" class="details-item">
-                        <i class="fas fa-wind"></i>
-                        <div class="info">
-                            <div class="details-label">Wind Speed</div>
-                            <div class="details-value">Value</div>
-                        </div>
-                    </div>
+					<div id="humidity" class="details-item">
+						<i class="fas fa-tint"></i>
+						<div class="info">
+							<div class="details-label">Humidity</div>
+							<div class="details-value">Value</div>
+						</div>
+					</div>
 
-                </div>
-            </div>
-        </div>
-    <script src="script.js"></script>
-    </body>
+					<div id="wind" class="details-item">
+						<i class="fas fa-wind"></i>
+						<div class="info">
+							<div class="details-label">Wind Speed</div>
+							<div class="details-value">Value</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>

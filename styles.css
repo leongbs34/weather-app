@@ -1,13 +1,16 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
 html,
 body {
-	height: 100vh;
-	width: 100vw;
-	padding: 0;
-	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 	background-image: url('background.jpg');
 	background-size: cover;
 	color: var(--font-color);
+	height: 100%;
 }
 
 :root {
@@ -19,9 +22,15 @@ h1,
 h2,
 h3,
 p,
-span {
+body {
 	margin: 0;
-	padding: 0;
+}
+
+header {
+	height: max(10%, 2rem);
+	max-width: 100vw;
+	display: flex;
+	justify-content: flex-end;
 }
 
 body {
@@ -30,15 +39,13 @@ body {
 }
 
 input {
-	position: relative;
-	padding: 10px 10px 10px 40px;
-	width: 20rem;
 	border: none;
 	border-bottom: 2px solid white;
 	background: transparent;
 	color: var(--font-color);
 	font-size: 1rem;
 	font-weight: 600;
+	flex-grow: 1;
 }
 
 ::placeholder {
@@ -46,17 +53,20 @@ input {
 	opacity: 0.6;
 }
 
+form {
+	display: flex;
+	align-items: center;
+	max-height: 2rem;
+	column-gap: 0.5em;
+}
+
 .icons {
-	padding: 13px 10px 10px 10px;
-	position: absolute;
 	z-index: 1;
 }
 
-span {
-	padding: 1rem;
-	width: max-content;
-	box-sizing: border-box;
-	float: right;
+.container {
+	padding: 1em;
+	width: min(80%, 400px);
 }
 
 input:focus-visible {
@@ -64,28 +74,47 @@ input:focus-visible {
 }
 
 .main {
-	padding: 10rem;
-	height: 100%;
+	margin: 3em auto;
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
 }
 
-.weather {
+@media (max-width: 600px) {
+	.main {
+		margin: 1em auto;
+	}
+}
+
+.weather-section {
 	background: rgba(0, 0, 0, 0.5);
 	border-radius: 10px;
-	padding: 3rem;
+	padding: 1.5em 3em;
 	font-size: 2rem;
-	width: max-content;
-	margin: auto;
 	display: flex;
 	flex-direction: column;
+}
+
+@media (max-width: 600px) {
+	.weather-section {
+		padding: 1em;
+	}
 }
 
 .location {
 	line-height: 3.5rem;
 }
 
+@media (max-width: 600px) {
+	.location {
+		font-size: 2rem;
+	}
+}
+
 .desc {
 	display: flex;
-	height: 10rem;
+	min-height: 10rem;
+	flex-flow: wrap;
 }
 
 .temperatureContainer {
@@ -98,8 +127,14 @@ input:focus-visible {
 }
 
 .temperature h1 {
-	font-size: 5rem;
-	padding-right: 0.4rem;
+	font-size: 3rem;
+	padding-right: 0.4em;
+}
+
+@media (max-width: 600px) {
+	.temperature h1 {
+		font-size: 1.8rem;
+	}
 }
 
 .textButton {
@@ -129,15 +164,31 @@ input:focus-visible {
 
 .details {
 	display: flex;
+	column-gap: 1.5em;
+	row-gap: 0.8em;
+	flex-wrap: wrap;
 }
 
 .details-item {
 	display: flex;
+	align-items: center;
 }
 
-.details-item i {
+@media (max-width: 1023px) {
+	.details-item {
+		flex-basis: 100%;
+	}
+}
+
+.details-item > i {
 	font-size: 5rem;
 	padding-right: 1rem;
+}
+
+@media (max-width: 600px) {
+	.details-item > i {
+		font-size: 2.8rem;
+	}
 }
 
 .info {
@@ -159,19 +210,17 @@ input:focus-visible {
 	font-size: 2.8rem;
 }
 
+@media (max-width: 600px) {
+	.details-value {
+		font-size: 1.5rem;
+	}
+}
+
 #feelsLike .details-value::after {
 	position: absolute;
 	content: var(--unit);
 	font-size: 1rem;
 	top: 0.4rem;
-}
-
-.details-item {
-	margin-right: 3rem;
-}
-
-.details-item:last-child {
-	margin-right: 0;
 }
 
 .error {
