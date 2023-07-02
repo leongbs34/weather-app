@@ -79,13 +79,13 @@ form {
 }
 
 .container {
-	padding: 1em;
+	margin: 1em;
 	width: 400px;
 }
 
 @media (max-width: 1023px) {
 	.container {
-		width: 90%;
+		/* width: 90%; */
 		font-size: 1.5rem;
 	}
 }
@@ -119,7 +119,7 @@ form {
 }
 
 .location {
-	line-height: 3.5rem;
+	line-height: 3rem;
 }
 
 @media (max-width: 600px) {
@@ -213,10 +213,6 @@ form {
 	flex-direction: column;
 }
 
-.hide {
-	visibility: hidden;
-}
-
 .details-label {
 	font-size: 1rem;
 }
@@ -240,11 +236,30 @@ form {
 	top: 0.4rem;
 }
 
+.search-bar {
+	position: relative;
+}
+
 .error {
-	color: #ff0000;
-	background: rgba(0, 0, 0, 0.6);
-	border-radius: 2px;
-	padding: 0.4rem;
+	color: #fff;
+	background: rgba(255, 1, 1, 0.712);
+	border-radius: 5px;
+	padding: 0.6em;
 	text-align: center;
-	font-weight: bold;
+
+	opacity: 1;
+	position: absolute;
+	top: 3.5ch;
+	left: 2ch;
+	transition: opacity 0.6s ease-out;
+}
+
+@media (max-width: 1023px) {
+	.error {
+		font-size: 1rem;
+	}
+}
+
+.hide {
+	opacity: 0;
 }

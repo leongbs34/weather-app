@@ -7,17 +7,22 @@ btnCelsius.addEventListener('click', convertToCelsius);
 btnFahrenheit.addEventListener('click', convertToFahrenheit);
 
 async function fetchWeatherData(city) {
+	let timer;
 	const errorMsg = document.querySelector('.error');
 	const request = await fetch(
 		`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c153617cf834f19994f86b76441f26ed`
 	);
 	if (request.ok) {
+		clearTimeout(timer);
 		errorMsg.classList.add('hide');
 		const data = await request.json();
 		result = data;
 		getData();
 	} else {
 		errorMsg.classList.remove('hide');
+		timer = setTimeout(() => {
+			errorMsg.classList.add('hide');
+		}, 2500);
 	}
 }
 
@@ -50,7 +55,7 @@ function getTemp() {
 async function getWeather() {
 	const weather = result.weather[0].description;
 
-	const desc = document.querySelector('.weather p');
+	const desc = document.querySelector('.weather-section p');
 	desc.textContent = weather;
 
 	const imgCode = result.weather[0].icon;
