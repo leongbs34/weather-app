@@ -129,8 +129,13 @@ form {
 
 .desc {
 	display: flex;
-	min-height: 10rem;
+	/* min-height: 10rem; */
 	flex-flow: wrap;
+}
+
+.weather-icon {
+	width: 120px;
+	aspect-ratio: 1;
 }
 
 .temperatureContainer {
